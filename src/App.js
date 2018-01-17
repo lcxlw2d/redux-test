@@ -18,8 +18,8 @@ export default class App extends React.Component {
                 <Link to="/profile">Profile</Link>
             </nav>
             <section>
-                <Route path="/" component={Home} exact>Home</Route>
-                <Route path="/profile" component={Profile} exact>Profile</Route>
+                <Route path="/" component={Home} exact></Route>
+                <Route path="/profile" component={Profile} exact></Route>
             </section>
         </div>
       </Router>
