@@ -2,7 +2,7 @@ const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: path.join(__dirname,'./src/js/main.js'),
+    entry: path.join(__dirname,'./src/main.js'),
 
     output: {
         path:path.join(__dirname,'/dist'),
@@ -10,7 +10,7 @@ module.exports = {
     },
 
     devServer: {
-        port:3000,
+        port:9528,
         open:true
     },
 
@@ -21,10 +21,7 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel-loader',
-                // query: {
-                //     presets: ['es2015', 'react']
-                // }
-            }    
+            }
         ]
     },
 
