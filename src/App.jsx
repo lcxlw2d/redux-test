@@ -30,8 +30,8 @@ class App extends React.Component {
       //       </section>
       //   </div>
       // </Router>
-      <Home todos={ todos } />
-
+      // <Home todos={ todos } />
+      <h1>666</h1>
     )
   }
 }
