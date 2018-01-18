@@ -1,10 +1,12 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-export default class Header extends React.Component {
+class Header extends React.Component {
 
     handleClick(){
         const text = this.refs.input.value
         this.props.addToList(text)
+        this.refs.input.value=''
     }
 
     render(){
@@ -18,4 +20,6 @@ export default class Header extends React.Component {
         )
     }
 }
+
+export default connect()(Header)
 

@@ -1,6 +1,9 @@
 const ADD_TODO = 'ADD_TODO'
 
-export const addTodo = (text) => ({
-    type: ADD_TODO,
-    text
-})
+export const addToDo = (text) => {
+    console.warn('action创建了')
+    return {
+        type: ADD_TODO,
+        text
+    }
+}

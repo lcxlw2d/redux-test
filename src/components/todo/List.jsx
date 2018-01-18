@@ -1,15 +1,19 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-export default class List extends React.Component {
+class List extends React.Component {
     render(){
+        
         return (
             <section className="list">
                 <ul>
-                    <li>item1</li>
-                    <li>item2</li>
-                    <li>item3</li>
+                    { this.props.todos.map((v,i)=>(
+                        <li key={ i }>{ v.text }</li>
+                    )) }
                 </ul>
             </section>
         )
     }
 }
+
+export default connect()(List)

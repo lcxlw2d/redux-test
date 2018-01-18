@@ -1,5 +1,6 @@
 const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
     entry: path.join(__dirname,'./src/main.js'),
@@ -33,7 +34,8 @@ module.exports = {
     plugins: [
         new htmlWebpackPlugin({
             template:path.join(__dirname,'./src/inedx.html')
-        })
+        }),
+        new FriendlyErrorsPlugin()
     ]
 
 }
